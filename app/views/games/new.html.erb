@@ -1,0 +1,16 @@
+<h1>Games#new</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+
+<p>
+<% @test_array.each do |x|%>
+ <%= x  %>
+ <% end %>
+</p>
+
+
+<form action="/score" method="get">
+  <input type="text" name="user_word" placeholder="enter word here">
+  <input type="submit">
+  <input type="hidden" name="test_array" value="<%=@test_array.join %>">
+  <input type="hidden" name="start_time" value="<%=@start_time %>">
+
